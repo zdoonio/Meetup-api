@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  description: MyText
+  evaluation_date: 2018-10-06 11:15:03
+  latitude: 9.99
+  longtiude: 9.99
+
+two:
+  name: MyString
+  description: MyText
+  evaluation_date: 2018-10-06 11:15:03
+  latitude: 9.99
+  longtiude: 9.99
