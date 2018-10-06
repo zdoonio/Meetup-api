@@ -31,4 +31,6 @@
 /config/master.key
 
 #Ignore .idea files
-./idea
+/.idea
+
+*.iml
