@@ -10,7 +10,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_10_10_100352) do
+ActiveRecord::Schema.define(version: 2018_10_10_103341) do
+
+  create_table "jwt_blacklists", force: :cascade do |t|
+  end
 
   create_table "meetups", force: :cascade do |t|
     t.string "name"
