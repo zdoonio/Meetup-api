@@ -6,8 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 #
-Meetup.create!(:name => 'Scala meeting', :description => 'It is an sample awesome Scala meeting', :evaluation_date => DateTime.now, :latitude => 53.1274275, :longtiude => 23.1575406)
-Meetup.create!(:name => 'Ruby meeting', :description => 'It is an sample awesome Ruby meeting', :evaluation_date => DateTime.now, :latitude => 53.1174275, :longtiude => 23.1375406)
-Meetup.create!(:name => 'Meet.js', :description => 'It is an sample awesome Javascript meeting', :evaluation_date => DateTime.now, :latitude => 53.15754006, :longtiude => 23.1575406)
-
-p "Created #{Meetup.count} meetups"
+User.destroy_all
+User.create!(:email => 'admin@meetupownia.pl', :password => 'admin123', :password_confirmation => 'admin123', :admin => true)
+User.create!(:email => 'user@meetupownia.pl', :password => 'user123', :password_confirmation => 'user123', :admin => false)
+p "Created #{User.count} users"
