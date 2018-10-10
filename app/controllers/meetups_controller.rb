@@ -20,6 +20,16 @@ class MeetupsController < ApplicationController
     end
   end
 
+  def update
+    meetup = Meetup.find(params[:id])
+
+    if meetup.update_attributes(meetup_params)
+      render json: {status: 'SUCCESS', message: 'Meetup updated', data: meetup}, status: :update
+    else
+      render json: {status: 'ERROR', message: 'Meetup not updated', data: meetup.errors}, status: :bad_request
+    end
+  end
+
   def destroy
     meetup = Meetup.find(params[:id])
     meetup.destroy
