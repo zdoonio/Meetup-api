@@ -1,4 +1,5 @@
 class MeetupsController < ApplicationController
+  before_action :authenticate_user!, only: [:create, :update, :destroy]
 
   def index
     meetups = Meetup.all
@@ -11,7 +12,7 @@ class MeetupsController < ApplicationController
   end
 
   def create
-    meetup = Meetup.new(meetup_params)
+    meetup = current_user.posts.build(meetup_params)
 
     if meetup.save
       render json: {status: 'SUCCESS', message: 'Meetup added', data: meetup}, status: :created
