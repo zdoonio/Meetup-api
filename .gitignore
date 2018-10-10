@@ -34,3 +34,6 @@
 /.idea
 
 *.iml
+
+#Ignore .env file
+/.env

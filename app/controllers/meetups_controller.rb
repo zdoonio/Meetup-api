@@ -12,7 +12,7 @@ class MeetupsController < ApplicationController
   end
 
   def create
-    meetup = current_user.posts.build(meetup_params)
+    meetup = current_user.meetups.build(meetup_params)
 
     if meetup.save
       render json: {status: 'SUCCESS', message: 'Meetup added', data: meetup}, status: :created
