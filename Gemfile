@@ -30,6 +30,7 @@ gem 'devise', '~> 4.5'
 gem 'devise-jwt'
 
 gem 'jwt'
+gem 'rswag'
 
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
